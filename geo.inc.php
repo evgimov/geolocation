@@ -279,13 +279,13 @@ class Geo {
     * @return string 
   */
   public function get_img($name){
-    $images = scandir('./img/');
+    $images = scandir('images');
     foreach($images as $img) {
       if(stripos($img,'.gif')){
         $pos = strpos($img,'.gif');
         $str = substr($img, 0, $pos);
         if (strcmp($str,$name) == 0){
-          $img = '<img src="img/'.$img.'" width="50" height="50" />';
+          $img = '<img src="images/'.$img.'" width="50" height="50" />';
           break;
        }
       }
@@ -293,7 +293,7 @@ class Geo {
         $pos = strpos($img,'.jpg');
         $str = substr($img, 0, $pos);
         if (strcmp($str,$name) == 0){
-          $img = '<img src="img/'.$img.'" width="50" height="50" />';
+          $img = '<img src="images/'.$img.'" width="50" height="50" />';
           break;
         }
       }
@@ -320,7 +320,7 @@ class Geo {
     * @return  string 
   */
   public function get_transliteration($word){
-     $translit = array(
+    $translit = array(
    
             'а' => 'a',   'б' => 'b',   'в' => 'v',
   
@@ -367,11 +367,10 @@ class Geo {
   
             'Э' => 'E\'',   'Ю' => 'YU',  'Я' => 'YA',
   
-        );
- 
-     $word = strtr($word, array_flip($translit)); // reverse transliteration 
-     $str = iconv('UTF-8','windows-1251//TRANSLIT',$word); 
-     return $str; 
+        ); 
+    $word = strtr($word, array_flip($translit)); // reverse transliteration 
+    $str = iconv('UTF-8','windows-1251//TRANSLIT',$word); 
+   return $str; 
   }
 }
 ?>
