@@ -1,4 +1,6 @@
 <?php
+include_once('lib/phpmorphy/src/common.php');
+
 /**
  * Geolocation service
  * =====================
@@ -9,12 +11,13 @@
  * @author      Evghenii Ghimazitdinov <e.ghimazitdinov@gmail.com> *
  *
  * @license     Code and contributions have 'MIT License'
- *              More details: https://github.com/serbanghita/Mobile-Detect/blob/master/LICENSE.txt
+ *              More details: https://github.com/evgimov/geolocation/blob/master/LICENSE
  *
- * @link        GitHub Repo:  https://github.com/serbanghita/Mobile-Detect
+ * @link        GitHub Repo:  https://github.com/evgimov/geolocation
  *
  * @version     1.0
  */
+
 
 class Geo {
   /**

@@ -1,6 +1,5 @@
 <?php
 include_once('lib/mobile_detect/Mobile_Detect.php');
-include_once('lib/phpmorphy/src/common.php');
 include_once('geo.inc.php');
 
 	$outputData = array();
